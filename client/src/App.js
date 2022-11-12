@@ -1,8 +1,8 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Router from './router/Router';
 
-function App() {
-  return <div className="App">Shopping Cart Project</div>;
-}
+const App = () => {
+  return <Router />;
+};
 
 export default App;
