@@ -32,10 +32,15 @@ const Footer = () => {
           <div className="col-md-6">
             <h4>Nhận tin mới từ Pandora</h4>
             <p>
-              Đăng kí ngay để nhận thông tin mới nhất về khuyến mãi, sự kiện, offer... từ Pandora.
+              Đăng kí ngay để nhận thông tin mới nhất về khuyến mãi, sự kiện,
+              offer... từ Pandora.
             </p>
             <Input.Group compact>
-              <Input size="large" style={{ width: 'calc(100% - 200px)' }} placeholder="Email" />
+              <Input
+                size="large"
+                style={{ width: 'calc(100% - 200px)' }}
+                placeholder="Email"
+              />
               <Button size="large">Gửi</Button>
             </Input.Group>
           </div>

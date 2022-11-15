@@ -1,8 +1,9 @@
 .item-product {
-  border: 1px solid #fff;
+  border: 6px solid #fff;
   position: relative;
   background: #f5f5f5;
   color: #000;
+  border-radius: 25px;
 
   &::before {
     content: '';
@@ -35,6 +36,8 @@
   &-img {
     position: relative;
     overflow: hidden;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
 
     &::before {
       content: 'XEM';

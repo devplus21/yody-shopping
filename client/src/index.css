@@ -1,11 +1,31 @@
 body {
   margin: 0;
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
   font-size: 14px;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  border: none;
+  border-radius: 0.5rem;
+  background: linear-gradient(98.63deg, #f5c32c 0%, #fc771f 100%);
+  transition: all 100ms ease-out;
+  height: 100%;
+  margin: 2% auto;
+  padding: 12px 195px;
+}
+
+.btn:hover {
+  cursor: pointer;
+  color: #ffffff;
+  background: linear-gradient(98.63deg, rgb(253, 207, 69) 0%, #ff9854 100%);
 }
 html,
 body,
@@ -122,7 +142,7 @@ blockquote:before,
 blockquote:after,
 q:before,
 q:after {
-  content: "";
+  content: '';
   content: none;
 }
 table {
@@ -133,7 +153,7 @@ table {
 button,
 input,
 a {
-  font-family: "Montserrat", sans-serif;
+  font-family: 'Montserrat', sans-serif;
 }
 img {
   max-width: 100%;

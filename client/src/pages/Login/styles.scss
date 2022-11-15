@@ -1,5 +1,5 @@
 .login {
-  padding-top: 300px;
+  padding-top: 150px;
   overflow: hidden;
 
   #login {
@@ -8,14 +8,14 @@
 
   .login-tit {
     position: relative;
+    text-align: center;
     &::after {
       content: '';
       background: #000;
       display: block;
       width: 60px;
       height: 4px;
-      margin-top: 20px;
-      margin-bottom: 20px;
+      margin: 20px auto;
     }
 
     h1 {

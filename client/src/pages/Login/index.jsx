@@ -1,27 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { Input, Button, message, Spin } from "antd";
-import "./styles.scss";
-import { LockOutlined, MailOutlined } from "@ant-design/icons";
-import { Link, useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
-import { clearErrors, login } from "../../redux/actions/userAction";
+import React, { useEffect, useState } from 'react';
+import { Input, Button, message, Spin } from 'antd';
+import './styles.scss';
+import { LockOutlined, MailOutlined } from '@ant-design/icons';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { clearErrors, login } from '../../redux/actions/userAction';
 
 const Login = () => {
   const dispatch = useDispatch();
   const location = useLocation();
-  const { error, loading, isAuthenticated } = useSelector((state) => state.user);
+  const { error, loading, isAuthenticated } = useSelector(
+    (state) => state.user,
+  );
 
   const navigate = useNavigate();
 
-  const [loginEmail, setLoginEmail] = useState("");
-  const [loginPassword, setLoginPassword] = useState("");
+  const [loginEmail, setLoginEmail] = useState('');
+  const [loginPassword, setLoginPassword] = useState('');
 
   const loginSubmit = (e) => {
     e.preventDefault();
     dispatch(login(loginEmail, loginPassword));
   };
 
-  const redirect = location.search ? `/${location.search.split("=")[1]}` : "/";
+  const redirect = location.search ? `/${location.search.split('=')[1]}` : '/';
 
   useEffect(() => {
     if (error) {
@@ -43,7 +45,7 @@ const Login = () => {
               <div className="customer-login">
                 <div id="login">
                   <div className="login-tit">
-                    <h1>Đăng nhập</h1>
+                    <h1>Đăng nhập hệ thông</h1>
                   </div>
                   <form action="" id="customer_login">
                     <Input
@@ -66,9 +68,9 @@ const Login = () => {
                       <span className="fw-lighter">hoặc</span>
                       <Link to="/register">Đăng ký</Link>
                     </div>
-                    <Button onClick={loginSubmit} className="mt-3 fw-bold" size="large" block>
+                    <button onClick={loginSubmit} className="btn">
                       ĐĂNG NHẬP
-                    </Button>
+                    </button>
                   </form>
                 </div>
               </div>

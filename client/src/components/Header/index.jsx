@@ -55,8 +55,15 @@ const Header = () => {
     <div className="header">
       <div className="header_container container">
         <Link to="/" className="Header_logo">
-          <img src={logo} width="150" height="50" alt="logo" />
+          Shop
         </Link>
+        <div className="d-flex list-menu">
+          {mainNav.map((item, index) => (
+            <Link to={item.path} key={index} className="menu-item">
+              {item.display}
+            </Link>
+          ))}
+        </div>
         <div className="header_action">
           <div className="action_search">
             <div className="form_group search-input-wrap">
@@ -88,7 +95,10 @@ const Header = () => {
               >
                 <BiUser className="iconRightHeaderitem" />
               </Link>
-              <Link to="/cart" className="iconRightHeader icon_shopingbagHeader">
+              <Link
+                to="/cart"
+                className="iconRightHeader icon_shopingbagHeader"
+              >
                 <Badge count={cartItems.length}>
                   <BiShoppingBag className="iconRightHeaderitem" />
                 </Badge>
@@ -96,14 +106,6 @@ const Header = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div className="d-flex list-menu container">
-        {mainNav.map((item, index) => (
-          <Link to={item.path} key={index} className="menu-item">
-            {item.display}
-          </Link>
-        ))}
       </div>
     </div>
   );
