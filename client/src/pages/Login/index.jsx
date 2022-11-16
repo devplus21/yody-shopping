@@ -45,7 +45,7 @@ const Login = () => {
               <div className="customer-login">
                 <div id="login">
                   <div className="login-tit">
-                    <h1>Đăng nhập hệ thông</h1>
+                    <h1>Đăng nhập hệ thống</h1>
                   </div>
                   <form action="" id="customer_login">
                     <Input

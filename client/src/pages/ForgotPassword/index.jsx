@@ -46,15 +46,14 @@ const ForgotPassword = () => {
           placeholder="Email"
           prefix={<MailOutlined />}
         />
-        <Button
+        <button
           loading={loading}
           onClick={handleForgotPassword}
-          className="mt-3 fw-bold"
-          size="large"
+          className="btn"
           block
         >
           Gửi
-        </Button>
+        </button>
 
         <Link to="/login" className="forgot-password-cancel">
           Huỷ

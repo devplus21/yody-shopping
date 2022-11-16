@@ -28,7 +28,7 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
 );
 
 const Dashboards = () => {
@@ -91,7 +91,7 @@ const Dashboards = () => {
       <div className="dashboard">
         <div className="row">
           <div className="col-md-4">
-            <div className="dashboard-item">
+            <div className="dashboard-item border">
               <Link to="/admin/products">
                 <h4>Sản phẩm</h4>
                 <p>{products && products.length}</p>
@@ -99,7 +99,7 @@ const Dashboards = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="dashboard-item">
+            <div className="dashboard-item border">
               <Link to="/admin/products">
                 <h4>Đơn hàng</h4>
                 <p>{orders && orders.length}</p>
@@ -107,7 +107,7 @@ const Dashboards = () => {
             </div>
           </div>
           <div className="col-md-4">
-            <div className="dashboard-item">
+            <div className="dashboard-item border">
               <Link to="/admin/users">
                 <h4>Users</h4>
                 <p>{users && users.length}</p>

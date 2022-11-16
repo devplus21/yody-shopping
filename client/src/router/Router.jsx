@@ -19,8 +19,6 @@ import ProtectedRoute from '../components/ProtectedRoute';
 import Checkout from '../pages/Checkout';
 import { loadUser } from '../redux/actions/userAction';
 
-import { Elements } from '@stripe/react-stripe-js';
-import { loadStripe } from '@stripe/stripe-js';
 import Success from '../pages/Checkout/Success';
 import Order from '../pages/Order';
 import Contact from '../pages/Contact';
@@ -31,18 +29,8 @@ const Router = () => {
   let location = useLocation();
   const dispatch = useDispatch();
 
-  const [stripeApiKey, setStripeApiKey] = useState('');
-
-  async function getStripeApiKey() {
-    const { data } = await axios.get('/api/stripeapikey');
-
-    setStripeApiKey(data.stripeApiKey);
-  }
-
   useEffect(() => {
     dispatch(loadUser());
-
-    getStripeApiKey();
   }, [dispatch]);
 
   const RenderHeader = (isHeader) => {
