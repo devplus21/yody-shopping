@@ -1,21 +1,23 @@
-import { InputNumber, message, Rate, Spin, Typography } from "antd";
-import React, { useEffect, useState } from "react";
-import InnerImageZoom from "react-inner-image-zoom";
-import { useDispatch, useSelector } from "react-redux";
-import { useParams } from "react-router-dom";
-import Review from "../../components/Review";
-import ReviewPost from "../../components/ReviewPost";
-import { addItemsToCart } from "../../redux/actions/cartAction";
-import { getProductDetails } from "../../redux/actions/productAction";
-import { formatPrice } from "../../utils/products";
-import "./styles.scss";
+import { InputNumber, message, Rate, Spin, Typography } from 'antd';
+import React, { useEffect, useState } from 'react';
+import InnerImageZoom from 'react-inner-image-zoom';
+import { useDispatch, useSelector } from 'react-redux';
+import { useParams } from 'react-router-dom';
+import Review from '../../components/Review';
+import ReviewPost from '../../components/ReviewPost';
+import { addItemsToCart } from '../../redux/actions/cartAction';
+import { getProductDetails } from '../../redux/actions/productAction';
+import { formatPrice } from '../../utils/products';
+import './styles.scss';
 const { Title } = Typography;
 
 const DetailProducts = () => {
   const dispatch = useDispatch();
   const { id } = useParams();
 
-  const { product, loading, error } = useSelector((state) => state.productDetails);
+  const { product, loading, error } = useSelector(
+    (state) => state.productDetails,
+  );
 
   const { user } = useSelector((state) => state.user);
 
@@ -27,12 +29,12 @@ const DetailProducts = () => {
 
   const addProduct = () => {
     if (product.Stock < 1) {
-      message.error("Sản phẩm đã hết hàng.");
+      message.error('Sản phẩm đã hết hàng.');
     } else if (product.Stock < quantity) {
-      message.error("Không thể mua quá số lượng hàng đang còn.");
+      message.error('Không thể mua quá số lượng hàng đang còn.');
     } else {
       dispatch(addItemsToCart(id, quantity));
-      message.success("Sản phẩm đã được thêm vào giỏ hàng");
+      message.success('Sản phẩm đã được thêm vào giỏ hàng');
     }
   };
   useEffect(() => {
@@ -44,19 +46,24 @@ const DetailProducts = () => {
   }, [dispatch, error, id]);
 
   const checkDiscount = product.discount
-    ? new Date(product.discount?.expireDate).toISOString() > new Date().toISOString()
+    ? new Date(product.discount?.expireDate).toISOString() >
+      new Date().toISOString()
     : false;
 
   const productDiscount = product.discount
-    ? product.discount.products.find((val) => val.productId.toString() === product._id.toString())
+    ? product.discount.products.find(
+        (val) => val.productId.toString() === product._id.toString(),
+      )
     : null;
 
   const afterPrice =
     checkDiscount && productDiscount?.amount
       ? formatPrice(
           productDiscount?.isPresent
-            ? (Number(product.price) * (100 - Number(productDiscount?.amount))) / 100
-            : Number(product.price) - Number(productDiscount?.amount)
+            ? (Number(product.price) *
+                (100 - Number(productDiscount?.amount))) /
+                100
+            : Number(product.price) - Number(productDiscount?.amount),
         )
       : formatPrice(product.price);
 
@@ -69,7 +76,11 @@ const DetailProducts = () => {
               <div className="detailProduct-img">
                 {product.images &&
                   product.images.map((img) => (
-                    <InnerImageZoom src={img.url} zoomSrc={img.url} key={img._id} />
+                    <InnerImageZoom
+                      src={img.url}
+                      zoomSrc={img.url}
+                      key={img._id}
+                    />
                   ))}
               </div>
             </div>
@@ -84,16 +95,20 @@ const DetailProducts = () => {
 
                 <div className="my-3 text-center">
                   <b className="pe-2">Số lượng : </b>
-                  <span>{product.Stock >= 1 ? product.Stock : "Hết hàng"}</span>
+                  <span>{product.Stock >= 1 ? product.Stock : 'Hết hàng'}</span>
                 </div>
 
                 <div
                   className={`detailProduct-info-price d-flex ${
-                    checkDiscount ? "justify-content-around" : "justify-content-center"
+                    checkDiscount
+                      ? 'justify-content-around'
+                      : 'justify-content-center'
                   }`}
                 >
                   {checkDiscount && (
-                    <span className="price-before">{formatPrice(product.price)}</span>
+                    <span className="price-before">
+                      {formatPrice(product.price)}
+                    </span>
                   )}
                   <b>{afterPrice}</b>
                 </div>
@@ -101,7 +116,7 @@ const DetailProducts = () => {
                 <div className="d-flex justify-content-center align-items-center mt-3">
                   <Rate
                     className="me-2"
-                    style={{ fontSize: "16px" }}
+                    style={{ fontSize: '16px' }}
                     disabled
                     value={product.ratings}
                   />
@@ -143,12 +158,14 @@ const DetailProducts = () => {
               <div className="detailProduct-content-review mt-3">
                 <Title level={3}>Đánh giá sản phẩm</Title>
                 <div className="mt-3">
-                  {user?.purchased?.find((pur) => pur.product.toString() === id.toString()) && (
-                    <ReviewPost id={id} />
-                  )}
+                  {user?.purchased?.find(
+                    (pur) => pur.product.toString() === id.toString(),
+                  ) && <ReviewPost id={id} />}
 
                   {product.reviews && product.reviews[0] ? (
-                    product.reviews.map((review) => <Review key={review._id} review={review} />)
+                    product.reviews.map((review) => (
+                      <Review key={review._id} review={review} />
+                    ))
                   ) : (
                     <div className="mt-3 text-center">Chưa có đánh giá nào</div>
                   )}
