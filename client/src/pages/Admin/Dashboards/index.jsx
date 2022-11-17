@@ -100,7 +100,7 @@ const Dashboards = () => {
           </div>
           <div className="col-md-4">
             <div className="dashboard-item border">
-              <Link to="/admin/products">
+              <Link to="/admin/orders">
                 <h4>Đơn hàng</h4>
                 <p>{orders && orders.length}</p>
               </Link>
@@ -119,9 +119,9 @@ const Dashboards = () => {
           <Line data={lineState} />
         </div>
 
-        <div className="mt-5 dashboard-doughnut">
+        {/* <div className="mt-5 dashboard-doughnut">
           <Doughnut data={doughnutState} />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );

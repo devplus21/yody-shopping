@@ -8,7 +8,7 @@ const CartEmpty = () => {
     <div className="cartEmpty">
       <div className="cartEmpty-content">
         <p>Giỏ hàng đang trống</p>
-        <Link className="btn-shopping" to="/products">
+        <Link className="btn" to="/products" style={{ padding: '22px 75px' }}>
           Tiếp tục mua sắm
         </Link>
       </div>

@@ -155,7 +155,7 @@ const DetailProducts = () => {
                 </p>
               </div>
 
-              <div className="detailProduct-content-review mt-3">
+              {/* <div className="detailProduct-content-review mt-3">
                 <Title level={3}>Đánh giá sản phẩm</Title>
                 <div className="mt-3">
                   {user?.purchased?.find(
@@ -170,7 +170,7 @@ const DetailProducts = () => {
                     <div className="mt-3 text-center">Chưa có đánh giá nào</div>
                   )}
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>

@@ -54,8 +54,12 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header_container container">
-        <Link to="/" className="Header_logo">
-          Shop
+        <Link
+          to="/"
+          className="Header_logo"
+          style={{ color: '#fc771f', fontSize: '20px', fontWeight: '900' }}
+        >
+          ShopFashion
         </Link>
         <div className="d-flex list-menu">
           {mainNav.map((item, index) => (
@@ -84,11 +88,11 @@ const Header = () => {
               />
             </div>
             <div className="iconRightHeaderContainer">
-              <Link to="/map">
+              {/* <Link to="/map">
                 <div className="iconRightHeader icon_mapHeader">
                   <BiMap className="iconRightHeaderitem" />
                 </div>
-              </Link>
+              </Link> */}
               <Link
                 to={`${isAuthenticated ? 'account' : 'login'}`}
                 className="iconRightHeader icon_userHeader"
