@@ -57,7 +57,7 @@ const Header = () => {
         <Link
           to="/"
           className="Header_logo"
-          style={{ color: '#fc771f', fontSize: '20px', fontWeight: '900' }}
+          style={{ color: '#4267B2', fontSize: '32px', fontWeight: '900' }}
         >
           ShopFashion
         </Link>
@@ -93,12 +93,7 @@ const Header = () => {
                   <BiMap className="iconRightHeaderitem" />
                 </div>
               </Link> */}
-              <Link
-                to={`${isAuthenticated ? 'account' : 'login'}`}
-                className="iconRightHeader icon_userHeader"
-              >
-                <BiUser className="iconRightHeaderitem" />
-              </Link>
+
               <Link
                 to="/cart"
                 className="iconRightHeader icon_shopingbagHeader"
@@ -106,6 +101,12 @@ const Header = () => {
                 <Badge count={cartItems.length}>
                   <BiShoppingBag className="iconRightHeaderitem" />
                 </Badge>
+              </Link>
+              <Link
+                to={`${isAuthenticated ? 'account' : 'login'}`}
+                className="iconRightHeader icon_userHeader"
+              >
+                <BiUser className="iconRightHeaderitem" />
               </Link>
             </div>
           </div>

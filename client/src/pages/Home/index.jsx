@@ -9,10 +9,11 @@ import './styles.scss';
 const Home = () => {
   return (
     <div className="home">
-      <Banner />
-      <ListCategory />
       <SlideHome />
+      <ListCategory />
+
       {/* <ListProductsHome /> */}
+      <Banner />
       <Policy />
     </div>
   );

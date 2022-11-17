@@ -15,12 +15,13 @@ const Layout = ({ children, breadcrumb }) => {
         }}
       >
         {breadcrumb &&
-          breadcrumb.map((item, index) => <Breadcrumb.Item key={index}>{item}</Breadcrumb.Item>)}
+          breadcrumb.map((item, index) => (
+            <Breadcrumb.Item key={index}>{item}</Breadcrumb.Item>
+          ))}
       </Breadcrumb>
       <div
         className="site-layout-background"
         style={{
-          padding: 24,
           minHeight: 360,
         }}
       >

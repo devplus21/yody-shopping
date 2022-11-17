@@ -15,8 +15,8 @@ code {
   color: white;
   border: none;
   border-radius: 50px;
-  background: linear-gradient(98.63deg, #fd621a 0%, #f5b031 100%);
-  transition: all 100ms ease-out;
+  background: #4267b2;
+  transition: all 0.3s;
   height: 100%;
   margin: 2% auto;
   padding: 12px 195px;
@@ -25,7 +25,7 @@ code {
 .btn:hover {
   cursor: pointer;
   color: #ffffff;
-  background: linear-gradient(98.63deg, #ff9854 0%, rgb(253, 207, 69) 100%);
+  background: #5b7cbe;
 }
 html,
 body,

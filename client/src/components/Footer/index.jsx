@@ -20,6 +20,12 @@ const Footer = () => {
             >
               ShopFashion
             </div>
+            <br />
+            <p className="font">
+              Hướng đến mục tiêu mang lại niềm vui ăn mặc mới mỗi ngày cho hàng
+              triệu người tiêu dùng Việt. Hãy cùng Yolo hướng đến một cuộc sống
+              năng động, tích cực hơn.
+            </p>
           </div>
           <div className="col-md-6">
             <h4 className="font">Nhận tin mới từ ShopFashion</h4>
