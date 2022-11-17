@@ -57,7 +57,7 @@ const Header = () => {
         <Link
           to="/"
           className="Header_logo"
-          style={{ color: '#4267B2', fontSize: '32px', fontWeight: '900' }}
+          style={{ color: '#4267B2', fontSize: '28px', fontWeight: '900' }}
         >
           ShopFashion
         </Link>
