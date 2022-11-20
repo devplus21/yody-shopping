@@ -25,7 +25,7 @@
 }
 .text-tit h2 {
   font-family: Pandora Display, Arial, sans-serif;
-  font-size: 22px;
+  font-size: 27px;
   line-height: 1.22;
   font-weight: 700;
 }
@@ -35,7 +35,7 @@
   justify-content: space-between;
 }
 .listProductItem_container {
-  border: 1px solid #d0d1d2;
+  border: 2.5px solid rgb(66, 103, 178);
   box-sizing: border-box;
   padding-bottom: 29px;
   display: flex;
@@ -43,16 +43,19 @@
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  border-radius: 22px;
+  box-shadow: 0 0 20px #d3d3d3;
 }
 .listProductItem_container img {
   max-width: 100%;
+  max-height: 270px;
 }
 .listProductItem_title {
   display: inline-block;
-  border-bottom: 1px solid #ffcad4;
+
   text-transform: uppercase;
   color: #000;
 }
 .listProductItem_container:hover .listProductItem_title {
-  border-bottom: 2px solid #ffcad4;
+  border-bottom: 3px solid rgb(66, 103, 178);
 }
