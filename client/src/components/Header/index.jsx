@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import { SearchOutlined } from '@ant-design/icons';
 import { BiMap, BiUser, BiShoppingBag } from 'react-icons/bi';
 import { Badge, Button } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import { useSelector } from 'react-redux';
-
+import './styles.scss';
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { isAuthenticated } = useSelector((state) => state.user);
