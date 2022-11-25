@@ -53,7 +53,7 @@ const OrderProcess = () => {
         {loading ? (
           <></>
         ) : (
-          <div className="orderProcess">
+          <div className="orderProcess " style={{ padding: '20px' }}>
             <div className="orderProcess-tit">
               <h1 className="text-danger">Đơn hàng: #{order && order._id}</h1>
             </div>

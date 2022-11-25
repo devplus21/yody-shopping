@@ -64,8 +64,8 @@ const Login = () => {
                       prefix={<LockOutlined />}
                     />
                     <div className="d-flex req_pass">
-                      <Link to="/password/forgot">Quên mật khẩu?</Link>
-                      <span className="fw-lighter">hoặc</span>
+                      {/* <Link to="/password/forgot">Quên mật khẩu?</Link>
+                      <span className="fw-lighter">hoặc</span> */}
                       <Link to="/register">Đăng ký</Link>
                     </div>
                     <button onClick={loginSubmit} className="btn">

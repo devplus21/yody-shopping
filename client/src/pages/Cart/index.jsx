@@ -45,7 +45,10 @@ const Cart = () => {
                   <span>Tổng tiền </span>
                   <span className="money">
                     {formatPrice(
-                      cartItems.reduce((acc, item) => acc + item.quantity * item.afterPrice, 0)
+                      cartItems.reduce(
+                        (acc, item) => acc + item.quantity * item.afterPrice,
+                        0,
+                      ),
                     )}
                   </span>
                 </div>
@@ -60,7 +63,16 @@ const Cart = () => {
                 </div> */}
 
                 <div className="cart-checkout text-center">
-                  <button onClick={handleCheckout} className="button-primary" type="submit">
+                  <button
+                    onClick={handleCheckout}
+                    className="btn"
+                    type="submit"
+                    style={{
+                      padding: '25px 75px',
+                      fontWeight: '500',
+                      fontSize: '20px',
+                    }}
+                  >
                     Thanh toán
                   </button>
                   <Link className="cart-continue" to="/products">

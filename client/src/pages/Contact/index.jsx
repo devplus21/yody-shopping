@@ -118,9 +118,9 @@ function Contact() {
                   style={{ marginBottom: '15px' }}
                 />
 
-                <Button type="primary" className="btn_send">
+                <button className="btn" style={{ padding: '20px 85px' }}>
                   Gửi cho chúng tôi
-                </Button>
+                </button>
               </div>
             </div>
           </div>

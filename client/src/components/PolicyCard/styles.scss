@@ -2,12 +2,13 @@
   margin-top: 100px;
 }
 .policy-card {
+  border: 3px solid rgb(66, 103, 178);
   display: flex;
   align-items: center;
   justify-content: flex-start;
   padding: 20px;
   padding-left: 0;
-  box-shadow: 0 2px 19px #ddd;
+  box-shadow: 0 0 20px #d3d3d3;
   transition: transform 0.5s ease;
   border-radius: 15px;
 

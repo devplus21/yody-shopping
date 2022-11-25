@@ -2,7 +2,10 @@ import { Button, Input, message, Spin } from 'antd';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import { clearErrors, createCategory } from '../../../redux/actions/categoryAction';
+import {
+  clearErrors,
+  createCategory,
+} from '../../../redux/actions/categoryAction';
 import { NEW_CATEGORY_RESET } from '../../../redux/types/categoryTypes';
 import Layout from '../Layout';
 
@@ -43,7 +46,6 @@ const NewCategory = () => {
             style={{
               width: '500px',
               margin: '10px auto 50px',
-              boxShadow: ' rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
               padding: '50px',
             }}
           >
