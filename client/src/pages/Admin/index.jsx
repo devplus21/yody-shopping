@@ -64,23 +64,23 @@ const items = [
     '9',
     <AreaChartOutlined />,
   ),
-  getItem(
-    <Link to="/admin/productReviews">Đánh giá sản phẩm</Link>,
-    '10',
-    <CommentOutlined />,
-  ),
-  getItem('Mã giảm giá', 'code', <QrcodeOutlined />, [
-    getItem(
-      <Link to="/admin/discounts">Mã giảm giá</Link>,
-      '11',
-      <QrcodeOutlined />,
-    ),
-    getItem(
-      <Link to="/admin/discount">Thêm mã giảm giá</Link>,
-      '12',
-      <AppstoreAddOutlined />,
-    ),
-  ]),
+  // getItem(
+  //   <Link to="/admin/productReviews">Đánh giá sản phẩm</Link>,
+  //   '10',
+  //   <CommentOutlined />,
+  // ),
+  // getItem('Mã giảm giá', 'code', <QrcodeOutlined />, [
+  //   getItem(
+  //     <Link to="/admin/discounts">Mã giảm giá</Link>,
+  //     '11',
+  //     <QrcodeOutlined />,
+  //   ),
+  //   getItem(
+  //     <Link to="/admin/discount">Thêm mã giảm giá</Link>,
+  //     '12',
+  //     <AppstoreAddOutlined />,
+  //   ),
+  // ]),
 ];
 
 const Admin = () => {
@@ -101,7 +101,12 @@ const Admin = () => {
       }}
     >
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
-        <div className="logo">Shop</div>
+        <div
+          className="logo"
+          style={{ color: '#fc771f', fontSize: '20px', fontWeight: '900' }}
+        >
+          ShopFashion
+        </div>
         <Menu
           onClick={onClickTest}
           defaultSelectedKeys={['1']}

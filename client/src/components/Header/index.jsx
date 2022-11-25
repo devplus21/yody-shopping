@@ -1,12 +1,11 @@
 import React, { useState } from 'react';
-import './styles.scss';
 import { SearchOutlined } from '@ant-design/icons';
 import { BiMap, BiUser, BiShoppingBag } from 'react-icons/bi';
 import { Badge, Button } from 'antd';
 import { Link, useNavigate } from 'react-router-dom';
 import logo from '../../assets/images/logo.svg';
 import { useSelector } from 'react-redux';
-
+import './styles.scss';
 const Header = () => {
   const { cartItems } = useSelector((state) => state.cart);
   const { isAuthenticated } = useSelector((state) => state.user);
@@ -54,8 +53,12 @@ const Header = () => {
   return (
     <div className="header">
       <div className="header_container container">
-        <Link to="/" className="Header_logo">
-          Shop
+        <Link
+          to="/"
+          className="Header_logo"
+          style={{ color: '#4267B2', fontSize: '28px', fontWeight: '900' }}
+        >
+          ShopFashion
         </Link>
         <div className="d-flex list-menu">
           {mainNav.map((item, index) => (
@@ -84,17 +87,12 @@ const Header = () => {
               />
             </div>
             <div className="iconRightHeaderContainer">
-              <Link to="/map">
+              {/* <Link to="/map">
                 <div className="iconRightHeader icon_mapHeader">
                   <BiMap className="iconRightHeaderitem" />
                 </div>
-              </Link>
-              <Link
-                to={`${isAuthenticated ? 'account' : 'login'}`}
-                className="iconRightHeader icon_userHeader"
-              >
-                <BiUser className="iconRightHeaderitem" />
-              </Link>
+              </Link> */}
+
               <Link
                 to="/cart"
                 className="iconRightHeader icon_shopingbagHeader"
@@ -102,6 +100,12 @@ const Header = () => {
                 <Badge count={cartItems.length}>
                   <BiShoppingBag className="iconRightHeaderitem" />
                 </Badge>
+              </Link>
+              <Link
+                to={`${isAuthenticated ? 'account' : 'login'}`}
+                className="iconRightHeader icon_userHeader"
+              >
+                <BiUser className="iconRightHeaderitem" />
               </Link>
             </div>
           </div>

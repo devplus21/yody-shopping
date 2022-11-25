@@ -1,16 +1,22 @@
 import React from 'react';
-import imgbackground from '../../assets/images/background.png';
+
 import imgAbout from '../../assets/images/imgabout.png';
 import './style.scss';
 import { PhoneOutlined } from '@ant-design/icons';
 
 function About() {
   return (
-    <div style={{ marginTop: '150px' }} className="container">
+    <div
+      style={{ marginTop: '126px', marginBottom: '100px' }}
+      className="container"
+    >
       <div className="row">
         <div className="col-md-6 About_left">
-          <img src={imgbackground} alt="" style={{ width: '100%' }} />
-          <img src={imgAbout} alt="" style={{ width: '100%' }} />
+          <img
+            src={imgAbout}
+            alt=""
+            style={{ width: '80%', borderRadius: '25px' }}
+          />
         </div>
         <div className="col-md-6">
           <div className="infoContent">
@@ -35,10 +41,9 @@ function About() {
               }}
             >
               {' '}
-              Lorem ipsum dolor sit, amet magni, nostrum blanditiis nisi
-              numquam, dolorum eius alias unde incidunt! Consectetur laboriosam
-              facilis fugit totam ad dolores cumque, sit beatae aut voluptates,
-              eos tempore.
+              Tự hào là thương hiệu Việt, không chỉ mang đến những sản phẩm đẹp
+              mà còn trao gửi những Giá trị thật - Hạnh phúc đích thực đến tận
+              tay khách hàng.
             </div>
             <div
               style={{
@@ -50,8 +55,7 @@ function About() {
               }}
             >
               {' '}
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae,
-              totam.
+              Liên hệ chúng tôi qua
             </div>
             <div
               className="phoneNumber"
@@ -64,9 +68,7 @@ function About() {
               <PhoneOutlined
                 style={{ marginRight: '5px ', color: '#ea8496 !important' }}
               />
-              <p style={{ margin: '0', fontWeight: '700' }}>
-                +1 (234) 567-8910
-              </p>
+              <p style={{ margin: '0', fontWeight: '700' }}>+84 382 567 8910</p>
             </div>
           </div>
         </div>

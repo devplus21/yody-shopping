@@ -1,14 +1,16 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import imgLogo from '../../assets/images/banner.webp';
-import freeship from '../../assets/images/freeship.jpg';
+import banner from '../../assets/images/banner.png';
 import './styles.scss';
 
 const Banner = () => {
   return (
-    <div className="banner">
+    <div
+      className="banner"
+      style={{ margin: '0 auto', width: '85%', marginBottom: '35px' }}
+    >
       <Link className="d-flex justify-content-center" to="/products">
-        <img src={freeship} alt="banner" />
+        <img src={banner} alt="banner" style={{ borderRadius: '30px' }} />
       </Link>
     </div>
   );

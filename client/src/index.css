@@ -14,9 +14,9 @@ code {
   justify-content: center;
   color: white;
   border: none;
-  border-radius: 0.5rem;
-  background: linear-gradient(98.63deg, #f5c32c 0%, #fc771f 100%);
-  transition: all 100ms ease-out;
+  border-radius: 50px;
+  background: #4267b2;
+  transition: all 0.3s;
   height: 100%;
   margin: 2% auto;
   padding: 12px 195px;
@@ -25,7 +25,7 @@ code {
 .btn:hover {
   cursor: pointer;
   color: #ffffff;
-  background: linear-gradient(98.63deg, rgb(253, 207, 69) 0%, #ff9854 100%);
+  background: #5b7cbe;
 }
 html,
 body,

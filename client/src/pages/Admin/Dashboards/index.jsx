@@ -90,7 +90,7 @@ const Dashboards = () => {
     <Layout breadcrumb={['Trang chủ']}>
       <div className="dashboard">
         <div className="row">
-          <div className="col-md-4">
+          <div className="col-md-4 mt-2">
             <div className="dashboard-item border">
               <Link to="/admin/products">
                 <h4>Sản phẩm</h4>
@@ -98,15 +98,15 @@ const Dashboards = () => {
               </Link>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mt-2">
             <div className="dashboard-item border">
-              <Link to="/admin/products">
+              <Link to="/admin/orders">
                 <h4>Đơn hàng</h4>
                 <p>{orders && orders.length}</p>
               </Link>
             </div>
           </div>
-          <div className="col-md-4">
+          <div className="col-md-4 mt-2">
             <div className="dashboard-item border">
               <Link to="/admin/users">
                 <h4>Users</h4>
@@ -119,9 +119,9 @@ const Dashboards = () => {
           <Line data={lineState} />
         </div>
 
-        <div className="mt-5 dashboard-doughnut">
+        {/* <div className="mt-5 dashboard-doughnut">
           <Doughnut data={doughnutState} />
-        </div>
+        </div> */}
       </div>
     </Layout>
   );
