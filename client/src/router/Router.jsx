@@ -19,6 +19,9 @@ import ProtectedRoute from '../components/ProtectedRoute';
 import Checkout from '../pages/Checkout';
 import { loadUser } from '../redux/actions/userAction';
 
+import { Elements } from '@stripe/react-stripe-js';
+import { loadStripe } from '@stripe/stripe-js';
+import Payment from '../pages/Checkout/Payment';
 import Success from '../pages/Checkout/Success';
 import Order from '../pages/Order';
 import Contact from '../pages/Contact';

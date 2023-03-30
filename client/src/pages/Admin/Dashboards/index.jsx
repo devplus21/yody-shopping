@@ -28,7 +28,7 @@ ChartJS.register(
   ArcElement,
   Title,
   Tooltip,
-  Legend,
+  Legend
 );
 
 const Dashboards = () => {
@@ -90,24 +90,24 @@ const Dashboards = () => {
     <Layout breadcrumb={['Trang chủ']}>
       <div className="dashboard">
         <div className="row">
-          <div className="col-md-4 mt-2">
-            <div className="dashboard-item border">
+          <div className="col-md-4">
+            <div className="dashboard-item">
               <Link to="/admin/products">
                 <h4>Sản phẩm</h4>
                 <p>{products && products.length}</p>
               </Link>
             </div>
           </div>
-          <div className="col-md-4 mt-2">
-            <div className="dashboard-item border">
-              <Link to="/admin/orders">
+          <div className="col-md-4">
+            <div className="dashboard-item">
+              <Link to="/admin/products">
                 <h4>Đơn hàng</h4>
                 <p>{orders && orders.length}</p>
               </Link>
             </div>
           </div>
-          <div className="col-md-4 mt-2">
-            <div className="dashboard-item border">
+          <div className="col-md-4">
+            <div className="dashboard-item">
               <Link to="/admin/users">
                 <h4>Users</h4>
                 <p>{users && users.length}</p>
@@ -119,9 +119,9 @@ const Dashboards = () => {
           <Line data={lineState} />
         </div>
 
-        {/* <div className="mt-5 dashboard-doughnut">
+        <div className="mt-5 dashboard-doughnut">
           <Doughnut data={doughnutState} />
-        </div> */}
+        </div>
       </div>
     </Layout>
   );

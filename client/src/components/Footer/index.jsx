@@ -18,7 +18,7 @@ const Footer = () => {
               className="logo"
               style={{ color: '#fff', fontSize: '20px', fontWeight: '900' }}
             >
-              ShopFashion
+              Yody
             </div>
             <br />
             <p className="font">
@@ -28,10 +28,10 @@ const Footer = () => {
             </p>
           </div>
           <div className="col-md-6">
-            <h4 className="font">Nhận tin mới từ ShopFashion</h4>
+            <h4 className="font">Nhận tin mới từ Yody</h4>
             <p className="font">
               Đăng kí ngay để nhận thông tin mới nhất về khuyến mãi, sự kiện,
-              offer... từ ShopFashion.
+              offer... từ Yody.
             </p>
             <Input.Group compact>
               <Input
@@ -47,8 +47,8 @@ const Footer = () => {
           <div className="col-md-3">
             <h5 className="fw-bold font">GIỚI THIỆU</h5>
             <ul className="font">
-              <li>Về ShopFashion</li>
-              <li>Câu chuyện ShopFashion</li>
+              <li>Về Yody</li>
+              <li>Câu chuyện Yody</li>
               <li>Về Tập Đoàn Shop</li>
               <li>Liên hệ</li>
             </ul>

@@ -56,9 +56,9 @@ const Header = () => {
         <Link
           to="/"
           className="Header_logo"
-          style={{ color: '#4267B2', fontSize: '28px', fontWeight: '900' }}
+          style={{ color: '#fcaf17 ', fontSize: '28px', fontWeight: '900' }}
         >
-          ShopFashion
+          Yody
         </Link>
         <div className="d-flex list-menu">
           {mainNav.map((item, index) => (

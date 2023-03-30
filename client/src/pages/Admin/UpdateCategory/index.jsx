@@ -16,7 +16,11 @@ const UpdateCategory = () => {
   const navigate = useNavigate();
 
   const { error, category } = useSelector((state) => state.categoryDetails);
-  const { loading, error: updateError, isUpdated } = useSelector((state) => state.category);
+  const {
+    loading,
+    error: updateError,
+    isUpdated,
+  } = useSelector((state) => state.category);
 
   const [name, setName] = useState('');
   useEffect(() => {
@@ -37,7 +41,7 @@ const UpdateCategory = () => {
     }
 
     if (isUpdated) {
-      message.success('cập nhật loại sản phẩm thành công');
+      message.success('cập nhật Danh mục sản phẩm thành công');
       navigate('/admin');
       dispatch({ type: UPDATE_CATEGORY_RESET });
     }
@@ -51,7 +55,7 @@ const UpdateCategory = () => {
   };
 
   return (
-    <Layout breadcrumb={['Loại sản phẩm', 'Cập nhật loại sản phẩm']}>
+    <Layout breadcrumb={['Danh mục sản phẩm', 'Cập nhật Danh mục sản phẩm']}>
       <div className="newCategory">
         <Spin spinning={loading}>
           <div
@@ -59,14 +63,20 @@ const UpdateCategory = () => {
             style={{
               width: '500px',
               margin: '10px auto 50px',
-              boxShadow: ' rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
+              boxShadow:
+                ' rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
               padding: '50px',
             }}
           >
-            <label>Tên loại sản phẩm : </label>
+            <label>Tên Danh mục sản phẩm : </label>
             <Input value={name} onChange={(e) => setName(e.target.value)} />
-            <Button type="primary" block className="mt-3" onClick={handleUpdate}>
-              Thêm loại sản phẩm
+            <Button
+              type="primary"
+              block
+              className="mt-3"
+              onClick={handleUpdate}
+            >
+              Thêm Danh mục sản phẩm
             </Button>
           </div>
         </Spin>

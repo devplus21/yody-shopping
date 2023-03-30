@@ -294,7 +294,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																					<tr>
 																																							<td align="left" width="46">
 																																									<a href="#"
-																																											data-saferedirecturl="https://pandora.norbreeze.vn/"><img
+																																											data-saferedirecturl="https://Yody.norbreeze.vn/"><img
 																																													src="https://file.hstatic.net/200000103143/file/giftset_shopbytheme_6676b981380a4d60a058dee6eeb9fb25.png"
 																																													width="35" height="35"
 																																													style="display:block;border:0;font-size:20px;font-weight:bold;font-family:sans-serif">
@@ -304,7 +304,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																							<td align="left">
 																																									<div
 																																											style="display:block;border:0;font-size:16px;font-weight:bold;font-family:sans-serif;color:#222222">
-																																											PANDORA Việt Nam
+																																											Yody Việt Nam
 																																									</div>
 																																							</td>
 																																					</tr>
@@ -337,7 +337,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																							<td>
 																																									<h1
 																																											style="font-size:22px;line-height:28px;letter-spacing:-.20px;margin:10px 0 16px 0;font-family:Helvetica Neue,Arial,sans-serif;color:#3b78ff;text-align:left">
-																																											Hóa đơn mua hàng PANDORA Việt Nam
+																																											Hóa đơn mua hàng Yody Việt Nam
 																																									</h1>
 																																							</td>
 																																					</tr>
@@ -348,7 +348,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																											style="margin:0 0 15px 0;font-size:14px;font-family:Helvetica Neue,Arial,sans-serif;color:#3c4043;text-align:left;line-height:24px">
 																																											Chào <b> ${dataSend.shippingInfo.name} </b>,<br>
 																																											Cảm ơn bạn đã mua hàng của
-																																											PANDORA Việt Nam
+																																											Yody Việt Nam
 																																									</p>
 																																							</td>
 																																					</tr>
@@ -668,7 +668,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																																	style="padding:0;margin:0">
 																																																	<div
 																																																			style="color:#f3e6ec;display:block;font-family:sans-serif;font-size:13px;font-weight:700;line-height:19px;margin:0px;padding:0px">
-																																																			PANDORA Việt Nam
+																																																			Yody Việt Nam
 																																																			2022
 																																																	</div>
 																																															</td>

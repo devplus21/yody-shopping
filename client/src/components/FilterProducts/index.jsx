@@ -3,8 +3,11 @@ import './styles.scss';
 import { Select } from 'antd';
 import { useDispatch, useSelector } from 'react-redux';
 import { getCategories } from '../../redux/actions/categoryAction';
-import { createSearchParams, useNavigate ,useSearchParams} from "react-router-dom";
-
+import {
+  createSearchParams,
+  useNavigate,
+  useSearchParams,
+} from 'react-router-dom';
 
 const { Option } = Select;
 
@@ -17,16 +20,14 @@ const priceSelect = [
   [4000000, 100000000],
 ];
 
-
 const FilterProducts = ({ setPrice, setCategory, setCurrentPage }) => {
-
   const navigate = useNavigate();
   const [searchParams] = useSearchParams();
 
   const dispatch = useDispatch();
 
   const { categories } = useSelector((state) => state.categories);
-  const [cateId ]= useState(searchParams.get('cate'));
+  const [cateId] = useState(searchParams.get('cate'));
 
   function handleChangePrice(value) {
     setPrice(priceSelect[value]);
@@ -37,15 +38,10 @@ const FilterProducts = ({ setPrice, setCategory, setCurrentPage }) => {
     setCategory(value === 'default' ? '' : value);
     setCurrentPage(1);
     navigate({
-      
       search: createSearchParams({
-          cate: value
-      }).toString()
-
-
-    
-  });
-
+        cate: value,
+      }).toString(),
+    });
   }
 
   useEffect(() => {
@@ -57,15 +53,19 @@ const FilterProducts = ({ setPrice, setCategory, setCurrentPage }) => {
       <div className="container">
         <div className="d-flex justify-content-between py-3">
           <div className="filterProducts-filter">
-            <Select defaultValue={cateId||"default"} style={{ width: 230 }} onChange={handleChangeCategory}>
-              <Option value="default">Loại sản phẩm</Option>
+            <h3> Sắp xếp theo</h3>
+            <Select
+              defaultValue={cateId || 'default'}
+              style={{ width: 230 }}
+              onChange={handleChangeCategory}
+            >
+              <Option value="default">Danh mục sản phẩm</Option>
               {categories &&
                 categories.map((category) => (
                   <Option key={category._id} value={category._id}>
                     {category.name}
                   </Option>
                 ))}
-          
             </Select>
 
             <Select

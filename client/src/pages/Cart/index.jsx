@@ -58,7 +58,7 @@ const Cart = () => {
                   <p>
                     Khi bấm nút "Thanh toán" đồng nghĩa Khách hàng đã hiểu và đồng ý các{' '}
                     <a>Điều khoản dịch vụ</a>
-                    của Pandora Việt Nam.
+                    của Yody Việt Nam.
                   </p>
                 </div> */}
 

@@ -133,7 +133,7 @@ function Contact() {
                 <p>
                   <strong>
                     {' '}
-                    Văn phòng Pandora Online Tầng L1 , 11-13 Huỳnh Thúc Kháng,
+                    Văn phòng Yody Online Tầng L1 , 11-13 Huỳnh Thúc Kháng,
                     Phường Bến Nghé, Quận 1, TP.Hồ Chí Minh, Việt Nam.
                   </strong>
                 </p>
@@ -141,7 +141,7 @@ function Contact() {
               <li>
                 <p>Email chúng tôi</p>
                 <p>
-                  <strong>pandoraonline@norbreeze.com</strong>
+                  <strong>Yodyonline@norbreeze.com</strong>
                 </p>
               </li>
               <li>

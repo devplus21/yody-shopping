@@ -1,9 +1,17 @@
 import { Button, Input, message, Space, Spin, Table } from 'antd';
-import { DeleteOutlined, EditOutlined, SearchOutlined } from '@ant-design/icons';
+import {
+  DeleteOutlined,
+  EditOutlined,
+  SearchOutlined,
+} from '@ant-design/icons';
 import React, { Fragment, useEffect, useRef, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { clearErrors, deleteCategory, getCategories } from '../../../redux/actions/categoryAction';
+import {
+  clearErrors,
+  deleteCategory,
+  getCategories,
+} from '../../../redux/actions/categoryAction';
 import { DELETE_CATEGORY_RESET } from '../../../redux/types/categoryTypes';
 import Layout from '../Layout';
 import Highlighter from 'react-highlight-words';
@@ -20,7 +28,7 @@ const Categories = () => {
     }
 
     if (isDeleted) {
-      message.success('Xoá loại sản phẩm thành công');
+      message.success('Xoá Danh mục sản phẩm thành công');
       dispatch({ type: DELETE_CATEGORY_RESET });
     }
     dispatch(getCategories());
@@ -47,7 +55,12 @@ const Categories = () => {
   };
 
   const getColumnSearchProps = (dataIndex) => ({
-    filterDropdown: ({ setSelectedKeys, selectedKeys, confirm, clearFilters }) => (
+    filterDropdown: ({
+      setSelectedKeys,
+      selectedKeys,
+      confirm,
+      clearFilters,
+    }) => (
       <div
         style={{
           padding: 8,
@@ -57,7 +70,9 @@ const Categories = () => {
           ref={searchInput}
           placeholder={`Tìm kiếm ${dataIndex}`}
           value={selectedKeys[0]}
-          onChange={(e) => setSelectedKeys(e.target.value ? [e.target.value] : [])}
+          onChange={(e) =>
+            setSelectedKeys(e.target.value ? [e.target.value] : [])
+          }
           onPressEnter={() => handleSearch(selectedKeys, confirm, dataIndex)}
           style={{
             marginBottom: 8,
@@ -134,12 +149,12 @@ const Categories = () => {
   const columns = [
     {
       dataIndex: 'id',
-      title: 'Mã loại sản phẩm',
+      title: 'Mã Danh mục sản phẩm',
       ...getColumnSearchProps('id'),
     },
     {
       dataIndex: 'name',
-      title: 'Tên loại sản phẩm',
+      title: 'Tên Danh mục sản phẩm',
       ...getColumnSearchProps('name'),
     },
     {
@@ -171,7 +186,7 @@ const Categories = () => {
     });
 
   return (
-    <Layout breadcrumb={['Loại sản phẩm']}>
+    <Layout breadcrumb={['Danh mục sản phẩm']}>
       <Spin spinning={loading}>
         <Table columns={columns} dataSource={rows} />
       </Spin>

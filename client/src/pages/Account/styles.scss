@@ -1,11 +1,11 @@
 .account {
-  margin-top: 90px;
+  margin-top: 140px;
 
   &-title {
     padding: 30px 15px;
-    // margin-bottom: 60px;
+    margin-bottom: 60px;
     h1 {
-      font-size: 35px;
+      font-size: 45px;
       font-weight: 700;
       margin: 0;
       text-align: center;
@@ -15,7 +15,7 @@
         display: block;
         width: 60px;
         height: 4px;
-        margin: 10px auto 0;
+        margin: 50px auto 0;
         background: #252a2b;
       }
     }
@@ -24,7 +24,7 @@
   &-sidebar {
     &-title {
       text-transform: uppercase;
-      margin-bottom: 15px;
+      margin-bottom: 30px;
       font-size: 15px;
       font-weight: 700;
       letter-spacing: 1px;
@@ -36,7 +36,7 @@
         a {
           display: block;
           position: relative;
-          padding: 10px 0px;
+          padding: 5px 0px;
           color: #27251f;
 
           &:before {
@@ -56,8 +56,9 @@
     background-color: #fafafa;
     &-title {
       font-size: 14px;
-      background-color: #d9edf7;
+      background-color: #2a2a86;
       padding: 10px;
+      color: #fff;
 
       &-name {
         font-weight: 700;

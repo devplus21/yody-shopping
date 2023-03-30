@@ -8,7 +8,7 @@
   align-items: center;
 }
 .ci-m66-feature-title {
-  font-family: Pandora Display, Arial, sans-serif;
+  font-family: Yody Display, Arial, sans-serif;
   margin-top: 0;
   margin-bottom: 0.5em;
   color: rgba(0, 0, 0, 0.85);
@@ -17,7 +17,7 @@
   font-size: 38px;
 }
 .ci-richtext.ci-richtext-text-alignment-left p {
-  font-family: Pandora Text, Arial, sans-serif;
+  font-family: Yody Text, Arial, sans-serif;
   font-weight: 400;
   font-size: 16px;
   color: #27251f;

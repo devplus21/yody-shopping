@@ -24,7 +24,7 @@ const NewCategory = () => {
     }
 
     if (success) {
-      message.success('Thêm loại sản phẩm thành công!');
+      message.success('Thêm Danh mục sản phẩm thành công!');
       navigate('/admin');
       dispatch({ type: NEW_CATEGORY_RESET });
     }
@@ -38,7 +38,7 @@ const NewCategory = () => {
   };
 
   return (
-    <Layout breadcrumb={['Loaị sản phẩm', 'Thêm loại sản phẩm']}>
+    <Layout breadcrumb={['Loaị sản phẩm', 'Thêm Danh mục sản phẩm']}>
       <div className="newCategory">
         <Spin spinning={loading}>
           <div
@@ -46,13 +46,15 @@ const NewCategory = () => {
             style={{
               width: '500px',
               margin: '10px auto 50px',
+              boxShadow:
+                ' rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px',
               padding: '50px',
             }}
           >
-            <label>Tên loại sản phẩm : </label>
+            <label>Tên Danh mục sản phẩm : </label>
             <Input value={name} onChange={(e) => setName(e.target.value)} />
             <Button type="primary" block className="mt-3" onClick={handleAdd}>
-              Thêm loại sản phẩm
+              Thêm Danh mục sản phẩm
             </Button>
           </div>
         </Spin>

@@ -108,9 +108,10 @@ const Checkout = () => {
           <div className="row">
             <div className="col-md-6">
               <div className="checkout-info">
-                <div className="checkout-tit">Pandora Việt Nam</div>
+                <div className="checkout-tit">Yody Việt Nam</div>
                 <Breadcrumb className="mt-2" separator=">">
                   <Breadcrumb.Item href="/cart">Giỏ hàng</Breadcrumb.Item>
+
                   <Breadcrumb.Item>Thông tin giao hàng</Breadcrumb.Item>
                 </Breadcrumb>
                 <div className="checkout-info-tit mt-2">

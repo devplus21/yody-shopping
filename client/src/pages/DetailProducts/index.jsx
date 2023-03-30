@@ -113,7 +113,7 @@ const DetailProducts = () => {
                   <b>{afterPrice}</b>
                 </div>
 
-                {/* <div className="d-flex justify-content-center align-items-center mt-3">
+                <div className="d-flex justify-content-center align-items-center mt-3">
                   <Rate
                     className="me-2"
                     style={{ fontSize: '16px' }}
@@ -121,7 +121,7 @@ const DetailProducts = () => {
                     value={product.ratings}
                   />
                   ({product.numOfReviews} Đánh giá)
-                </div> */}
+                </div>
 
                 <div className="text-center mt-3">
                   <InputNumber
@@ -159,7 +159,7 @@ const DetailProducts = () => {
                 </p>
               </div>
 
-              {/* <div className="detailProduct-content-review mt-3">
+              <div className="detailProduct-content-review mt-3">
                 <Title level={3}>Đánh giá sản phẩm</Title>
                 <div className="mt-3">
                   {user?.purchased?.find(
@@ -174,7 +174,7 @@ const DetailProducts = () => {
                     <div className="mt-3 text-center">Chưa có đánh giá nào</div>
                   )}
                 </div>
-              </div> */}
+              </div>
             </div>
           </div>
         </div>

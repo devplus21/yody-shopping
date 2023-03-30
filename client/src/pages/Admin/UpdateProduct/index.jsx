@@ -1,15 +1,15 @@
-import { Button, Image, Input, InputNumber, message, Select, Spin } from "antd";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate, useParams } from "react-router-dom";
-import { getCategories } from "../../../redux/actions/categoryAction";
+import { Button, Image, Input, InputNumber, message, Select, Spin } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate, useParams } from 'react-router-dom';
+import { getCategories } from '../../../redux/actions/categoryAction';
 import {
   clearErrors,
   getProductDetails,
   updateProduct,
-} from "../../../redux/actions/productAction";
-import { UPDATE_PRODUCT_RESET } from "../../../redux/types/productTypes";
-import Layout from "../Layout";
+} from '../../../redux/actions/productAction';
+import { UPDATE_PRODUCT_RESET } from '../../../redux/types/productTypes';
+import Layout from '../Layout';
 
 const UpdateProduct = () => {
   const dispatch = useDispatch();
@@ -18,14 +18,18 @@ const UpdateProduct = () => {
 
   const { error, product } = useSelector((state) => state.productDetails);
 
-  const { loading, error: updateError, isUpdated } = useSelector((state) => state.product);
+  const {
+    loading,
+    error: updateError,
+    isUpdated,
+  } = useSelector((state) => state.product);
 
   const { categories } = useSelector((state) => state.categories);
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
   const [Stock, setStock] = useState(0);
   const [images, setImages] = useState([]);
   const [oldImages, setOldImages] = useState([]);
@@ -53,8 +57,8 @@ const UpdateProduct = () => {
     }
 
     if (isUpdated) {
-      message.success("Cập nhật sản phẩm thành công!");
-      navigate("/admin/products");
+      message.success('Cập nhật sản phẩm thành công!');
+      navigate('/admin/products');
       dispatch({ type: UPDATE_PRODUCT_RESET });
     }
 
@@ -87,20 +91,20 @@ const UpdateProduct = () => {
 
     const myForm = new FormData();
 
-    myForm.set("name", name);
-    myForm.set("price", price);
-    myForm.set("description", description);
-    myForm.set("category", category);
-    myForm.set("Stock", Stock);
+    myForm.set('name', name);
+    myForm.set('price', price);
+    myForm.set('description', description);
+    myForm.set('category', category);
+    myForm.set('Stock', Stock);
 
     images.forEach((image) => {
-      myForm.append("images", image);
+      myForm.append('images', image);
     });
     dispatch(updateProduct(id, myForm));
   };
 
   return (
-    <Layout breadcrumb={["Sản phẩm", "Cập nhật sản phẩm"]}>
+    <Layout breadcrumb={['Sản phẩm', 'Cập nhật sản phẩm']}>
       <div className="newProduct">
         <Spin spinning={loading}>
           <div className="newProduct-content">
@@ -112,7 +116,7 @@ const UpdateProduct = () => {
               <label htmlFor="">Giá:</label>
               <InputNumber
                 min={0}
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 value={price}
                 onChange={(value) => setPrice(value)}
               />
@@ -126,10 +130,10 @@ const UpdateProduct = () => {
               />
             </div>
             <div className="group-item mt-3">
-              <label htmlFor="">Loại sản phẩm:</label>
+              <label htmlFor="">Danh mục sản phẩm:</label>
               <Select
-                style={{ width: "100%" }}
-                placeholder="Loại sản phẩm"
+                style={{ width: '100%' }}
+                placeholder="Danh mục sản phẩm"
                 value={category}
                 onChange={(value) => setCategory(value)}
               >
@@ -172,7 +176,11 @@ const UpdateProduct = () => {
               </div>
             </div>
             <div className="d-flex justify-content-end mt-3">
-              <Button onClick={updateProductSubmitHandler} type="primary" danger>
+              <Button
+                onClick={updateProductSubmitHandler}
+                type="primary"
+                danger
+              >
                 Cập nhật sản phẩm
               </Button>
             </div>

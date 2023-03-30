@@ -1,5 +1,5 @@
 .cart {
-  margin-top: 100px;
+  margin-top: 140px;
 
   &-title {
     h1 {
@@ -58,6 +58,16 @@
         }
       }
       .cart-checkout {
+        .button-primary {
+          font-size: 19px;
+          text-transform: uppercase;
+          padding: 14px 42px;
+          letter-spacing: 0.19px;
+          width: 100%;
+          color: #fff;
+          background-color: #000;
+          border: 1px solid #000;
+        }
         .cart-continue {
           margin-top: 20px;
           font-size: 16px;

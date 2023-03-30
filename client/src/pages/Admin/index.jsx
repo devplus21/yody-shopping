@@ -46,41 +46,42 @@ const items = [
       <FileAddOutlined />,
     ),
   ]),
-  getItem('Loại sản phẩm', 'sub1', <GoldOutlined />, [
+  getItem('Danh mục sản phẩm', 'sub1', <GoldOutlined />, [
     getItem(
-      <Link to="/admin/categories">Loại sản phẩm</Link>,
+      <Link to="/admin/categories">Danh mục sản phẩm</Link>,
       '3',
       <GoldOutlined />,
     ),
     getItem(
-      <Link to="/admin/category">Thêm loại sản phẩm</Link>,
+      <Link to="/admin/category">Thêm Danh mục sản phẩm</Link>,
       '4',
       <SisternodeOutlined />,
     ),
   ]),
-  getItem(<Link to="/admin/users">Khách hàng</Link>, 'sub2', <TeamOutlined />),
   getItem(
     <Link to="/admin/orders">Đơn đặt hàng</Link>,
     '9',
     <AreaChartOutlined />,
   ),
-  // getItem(
-  //   <Link to="/admin/productReviews">Đánh giá sản phẩm</Link>,
-  //   '10',
-  //   <CommentOutlined />,
-  // ),
-  // getItem('Mã giảm giá', 'code', <QrcodeOutlined />, [
-  //   getItem(
-  //     <Link to="/admin/discounts">Mã giảm giá</Link>,
-  //     '11',
-  //     <QrcodeOutlined />,
-  //   ),
-  //   getItem(
-  //     <Link to="/admin/discount">Thêm mã giảm giá</Link>,
-  //     '12',
-  //     <AppstoreAddOutlined />,
-  //   ),
-  // ]),
+  getItem(<Link to="/admin/users">Khách hàng</Link>, 'sub2', <TeamOutlined />),
+
+  getItem('Mã giảm giá', 'code', <QrcodeOutlined />, [
+    getItem(
+      <Link to="/admin/discounts">Mã giảm giá</Link>,
+      '11',
+      <QrcodeOutlined />,
+    ),
+    getItem(
+      <Link to="/admin/discount">Thêm mã giảm giá</Link>,
+      '12',
+      <AppstoreAddOutlined />,
+    ),
+  ]),
+  getItem(
+    <Link to="/admin/productReviews">Đánh giá sản phẩm</Link>,
+    '10',
+    <CommentOutlined />,
+  ),
 ];
 
 const Admin = () => {
@@ -103,12 +104,13 @@ const Admin = () => {
       <Sider collapsible collapsed={collapsed} onCollapse={onCollapse}>
         <div
           className="logo"
-          style={{ color: '#fc771f', fontSize: '20px', fontWeight: '900' }}
+          style={{ color: '#fcaf17', fontSize: '20px', fontWeight: '900' }}
         >
-          ShopFashion
+          Yody Shop
         </div>
         <Menu
           onClick={onClickTest}
+          theme="dark"
           defaultSelectedKeys={['1']}
           mode="inline"
           items={items}

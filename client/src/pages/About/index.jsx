@@ -15,7 +15,7 @@ function About() {
           <img
             src={imgAbout}
             alt=""
-            style={{ width: '80%', borderRadius: '25px' }}
+            style={{ width: '80%', borderRadius: '12px' }}
           />
         </div>
         <div className="col-md-6">

@@ -10,9 +10,7 @@ const ResetPassword = () => {
   const navigate = useNavigate();
   const { token } = useParams();
 
-  const { error, success, loading } = useSelector(
-    (state) => state.forgotPassword,
-  );
+  const { error, success, loading } = useSelector((state) => state.forgotPassword);
 
   const [newPassword, setNewPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
@@ -60,14 +58,9 @@ const ResetPassword = () => {
           placeholder="Xác nhận mật khẩu mới"
           prefix={<PullRequestOutlined />}
         />
-        <button
-          loading={loading}
-          onClick={handleResetPassword}
-          className="btn"
-          block
-        >
+        <Button loading={loading} onClick={handleResetPassword} className="mt-3 fw-bold" block>
           CẬP NHẬT
-        </button>
+        </Button>
 
         {/* <Link to="/login" className="forgot-password-cancel">
           Huỷ

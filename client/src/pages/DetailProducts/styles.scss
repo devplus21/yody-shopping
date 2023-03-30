@@ -1,5 +1,5 @@
 .detailProduct {
-  margin-top: 86px;
+  margin-top: 140px;
 
   &-img {
     display: grid;
@@ -45,6 +45,21 @@
         font-weight: 700;
         margin-right: 5px;
         margin-left: 5px;
+      }
+    }
+
+    &-action {
+      margin-top: 25px;
+
+      button {
+        display: flex;
+        background: #27251f;
+        color: #fff;
+        border: none;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        height: 44px;
       }
     }
   }

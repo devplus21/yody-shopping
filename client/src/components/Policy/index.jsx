@@ -8,11 +8,7 @@ const Policy = () => {
       <div className="row my-3">
         {policy.map((item, idx) => (
           <div className="col-md-3" key={idx}>
-            <PolicyCard
-              name={item.name}
-              description={item.description}
-              icon={item.icon}
-            />
+            <PolicyCard name={item.name} description={item.description} icon={item.icon} />
           </div>
         ))}
       </div>

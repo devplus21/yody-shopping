@@ -4,7 +4,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
 import FilterProducts from '../../components/FilterProducts';
 import ListProducts from '../../components/ListProducts';
-
 import { getProduct } from '../../redux/actions/productAction';
 import './styles.scss';
 import { useSearchParams } from 'react-router-dom';

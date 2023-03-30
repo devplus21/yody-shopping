@@ -1,12 +1,15 @@
-import { Button, Image, Input, InputNumber, message, Select, Spin } from "antd";
-import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { getCategories } from "../../../redux/actions/categoryAction";
-import { clearErrors, createProduct } from "../../../redux/actions/productAction";
-import { NEW_PRODUCT_RESET } from "../../../redux/types/productTypes";
-import Layout from "../Layout";
-import "./styles.scss";
+import { Button, Image, Input, InputNumber, message, Select, Spin } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { getCategories } from '../../../redux/actions/categoryAction';
+import {
+  clearErrors,
+  createProduct,
+} from '../../../redux/actions/productAction';
+import { NEW_PRODUCT_RESET } from '../../../redux/types/productTypes';
+import Layout from '../Layout';
+import './styles.scss';
 
 const NewProduct = () => {
   const dispatch = useDispatch();
@@ -15,10 +18,10 @@ const NewProduct = () => {
   const { loading, error, success } = useSelector((state) => state.newProduct);
   const { categories } = useSelector((state) => state.categories);
 
-  const [name, setName] = useState("");
+  const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
-  const [description, setDescription] = useState("");
-  const [category, setCategory] = useState("");
+  const [description, setDescription] = useState('');
+  const [category, setCategory] = useState('');
   const [Stock, setStock] = useState(0);
   const [images, setImages] = useState([]);
   const [imagesPreview, setImagesPreview] = useState([]);
@@ -30,8 +33,8 @@ const NewProduct = () => {
     }
 
     if (success) {
-      message.success("Thêm sản phẩm thành công!");
-      navigate("/admin");
+      message.success('Thêm sản phẩm thành công!');
+      navigate('/admin');
       dispatch({ type: NEW_PRODUCT_RESET });
     }
 
@@ -63,24 +66,24 @@ const NewProduct = () => {
 
     const myForm = new FormData();
 
-    myForm.set("name", name);
-    myForm.set("price", price);
-    myForm.set("description", description);
-    myForm.set("category", category);
-    myForm.set("Stock", Stock);
+    myForm.set('name', name);
+    myForm.set('price', price);
+    myForm.set('description', description);
+    myForm.set('category', category);
+    myForm.set('Stock', Stock);
 
     images.forEach((image) => {
-      myForm.append("images", image);
+      myForm.append('images', image);
     });
     dispatch(createProduct(myForm));
   };
 
   function handleChangeCategory(value) {
-    setCategory(value === "default" ? "" : value);
+    setCategory(value === 'default' ? '' : value);
   }
 
   return (
-    <Layout breadcrumb={["Sản phẩm", "Thêm sản phẩm"]}>
+    <Layout breadcrumb={['Sản phẩm', 'Thêm sản phẩm']}>
       <div className="newProduct">
         <Spin spinning={loading}>
           <div className="newProduct-content">
@@ -92,7 +95,7 @@ const NewProduct = () => {
               <label htmlFor="">Giá:</label>
               <InputNumber
                 min={0}
-                style={{ width: "100%" }}
+                style={{ width: '100%' }}
                 value={price}
                 onChange={(value) => setPrice(value)}
               />
@@ -106,10 +109,10 @@ const NewProduct = () => {
               />
             </div>
             <div className="group-item mt-3">
-              <label htmlFor="">Loại sản phẩm:</label>
+              <label htmlFor="">Danh mục sản phẩm:</label>
               <Select
-                style={{ width: "100%" }}
-                placeholder="Loại sản phẩm"
+                style={{ width: '100%' }}
+                placeholder="Danh mục sản phẩm"
                 onChange={handleChangeCategory}
               >
                 {categories &&
@@ -148,7 +151,11 @@ const NewProduct = () => {
               </div>
             </div>
             <div className="d-flex justify-content-end mt-3">
-              <Button onClick={createProductSubmitHandler} type="primary" danger>
+              <Button
+                onClick={createProductSubmitHandler}
+                type="primary"
+                danger
+              >
                 Thêm sản phẩm
               </Button>
             </div>
