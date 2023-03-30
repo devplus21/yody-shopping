@@ -295,7 +295,7 @@ let getBodyHTMLBill = (dataSend) => {
 																																							<td align="left" width="46">
 																																									<a href="#"
 																																											data-saferedirecturl="https://Yody.norbreeze.vn/"><img
-																																													src="https://file.hstatic.net/200000103143/file/giftset_shopbytheme_6676b981380a4d60a058dee6eeb9fb25.png"
+																																													src="https://play-lh.googleusercontent.com/xH4QFNdQcEOELtR2XyDxhMCka1q5PTEgY40LSGYVoT7fkbmAnPfA8LFYac7hmolnCRg=w240-h480-rw"
 																																													width="35" height="35"
 																																													style="display:block;border:0;font-size:20px;font-weight:bold;font-family:sans-serif">
 																																									</a>
